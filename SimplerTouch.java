@@ -68,15 +68,27 @@ public class SimplerTouch extends ApplicationAdapter implements InputProcessor {
         Circle x = new Circle(screenX1, Gdx.graphics.getHeight()-screenY1, 120);
         Circle y = new Circle(img.getWidth()*2+40, img.getHeight()-150, 60);
         Circle a = new Circle(img.getWidth()*2+75, img.getHeight()-220, 60);
-        if (x.contains(y) || y.contains(x))
+        Circle b = new Circle(img.getWidth()*2+40, img.getHeight()-290, 60);
+        Circle c = new Circle(img.getWidth()*2+75, img.getHeight()-360, 60);
+        if (x.contains(y))
         {
         	shapes.setColor(Color.BLUE);
         	System.out.println("Blue");
         }
-        else if (x.contains(a) || a.contains(x))
+        else if (x.contains(a))
         {
         	shapes.setColor(Color.RED);
         	System.out.println("Red");
+        }
+        else if (x.contains(b))
+        {
+        	shapes.setColor(Color.GREEN);
+        	System.out.println("Green");
+        }
+        else if (x.contains(c))
+        {
+        	shapes.setColor(Color.YELLOW);
+        	System.out.println("Yellow");
         }
      
         //System.out.println(Scout.circle.hasActions());
